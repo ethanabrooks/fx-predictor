@@ -1,0 +1,2 @@
+title: FX-Predictor: Machine Learning using Naive Bayes
+seas-usernames: bguild, tanami, mabdullah, ethanabrooks

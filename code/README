@@ -1,0 +1,50 @@
+(*///////////////////////////////////////////////////////////////////////////*)
+(*///////////////////////////////////////////////////////////////////////////*)
+(*****************************************************************************)
+
+The code should compile with `make` and offers three functions:
+- `train`
+- `predict`
+- 'assess'
+
+(*****************************************************************************)
+
+Examples:
+
+1]
+./fx-predictor train D USD JPY ../data/candles1.csv
+./fx-predictor train D USD JPY ../data/candles2.csv
+./fx-predictor train D USD JPY ../data/candles3.csv
+./fx-predictor train D USD JPY ../data/candles4.csv
+./fx-predictor train D USD JPY ../data/candles5.csv
+
+The output of 'train' is a csv file named './data/USD-JPY.csv' which contains
+the Naive Bayes Model.
+
+
+
+2]
+./fx-predictor predict D USD JPY ../data/candles1.csv
+./fx-predictor predict D USD JPY ../data/candles2.csv
+./fx-predictor predict D USD JPY ../data/candles3.csv
+./fx-predictor predict D USD JPY ../data/candles4.csv
+./fx-predictor predict D USD JPY ../data/candles5.csv
+
+The 'predict' function assumes that a model file already exists for USD-JPY 
+within ./data/ folder, as a result of the 'train' function. If it does not 
+exist, please re-run the train function.
+
+
+
+3]
+./fx-predictor assess D USD JPY ../data/candles1.csv
+./fx-predictor assess D USD JPY ../data/candles2.csv
+./fx-predictor assess D USD JPY ../data/candles3.csv
+./fx-predictor assess D USD JPY ../data/candles4.csv
+./fx-predictor assess D USD JPY ../data/candles5.csv
+
+
+The 'assess' function assumes that a model file already exists for USD-JPY 
+within ./data/ folder, as a result of the 'train' function. If it does not 
+exist, please re-run the train function.
+
